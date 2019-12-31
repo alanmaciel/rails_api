@@ -6,6 +6,7 @@ ruby '2.6.5'
 gem 'active_model_serializers'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'factory_bot_rails'
+gem 'kaminari'
 gem 'puma', '~> 4.1'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 gem 'rspec-rails'
