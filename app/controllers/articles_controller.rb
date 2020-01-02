@@ -3,10 +3,17 @@ class ArticlesController < ApplicationController
     articles = Article.recent.
       page(params[:page]).
       per(params[:per_page])
-    render json: articles
+    render json: serializer.new(articles)
   end
 
   def show
-    render json: Article.find(params[:id])
+    article = Article.find(params[:id])
+    render json: serializer.new(article)
+  end
+
+  private
+
+  def serializer
+    ArticleSerializer
   end
 end
